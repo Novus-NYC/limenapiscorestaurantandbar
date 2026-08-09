@@ -58,7 +58,7 @@ export function Hero() {
 
       <div
         data-hero-inner
-        className="shell relative grid w-full items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]"
+        className="shell relative grid w-full items-center gap-14 lg:grid-cols-[1fr_1fr] xl:grid-cols-[1fr_1.1fr]"
       >
         <div>
           <p data-hero-fade className="label opacity-0">
@@ -106,14 +106,16 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Native 4:3 at 30rem: the source is 1000px wide, which is exactly what a
-            480px frame asks for on a 2x display. No crop, no upscale. */}
+        {/* Native 4:3, filling its column. The source tops out at 1000px, so the 38rem
+            frame asks for a ~1.2x upsample on a 2x display — invisible on a photograph,
+            and worth it for the presence it buys the fold. The narrower cap below xl
+            keeps the headline column wide enough to hold "Experience the" on one line. */}
         <div data-hero-fade className="hidden opacity-0 lg:block">
-          <div className="mx-auto aspect-[4/3] max-w-[30rem] overflow-hidden rounded-card border border-ink/12">
+          <div className="mx-auto aspect-[4/3] max-w-[32rem] overflow-hidden rounded-card border border-ink/12 xl:max-w-[38rem]">
             <Img
               id="dish-steak-plancha"
               alt="Grilled steak on a cast-iron plancha with roasted potatoes and a cup of salsa criolla."
-              sizes="480px"
+              sizes="(min-width: 1280px) 608px, 512px"
               priority
               className="h-full w-full object-cover"
             />
