@@ -301,6 +301,19 @@ export const menu: MenuCategory[] = [
         price: { amount: 22 },
         confidence: "platform",
       },
+      {
+        // Not on any published menu we could reach, but the restaurant photographed it
+        // themselves — so it's listed as reported, with no price invented for it.
+        slug: "tallarines-verdes",
+        name: "Tallarines Verdes",
+        nameEn: "Peruvian Pesto",
+        description:
+          "Spaghetti in Peru's own pesto — basil and spinach blended with cheese — finished with shavings on top.",
+        price: { amount: null },
+        confidence: "reported",
+        image: "dish-tallarines-verdes",
+        tags: ["vegetarian"],
+      },
     ],
   },
 

@@ -75,7 +75,7 @@ export default function CateringPage() {
           {occasions.map((occasion, i) => (
             <article key={occasion.title} className="bg-white/70 p-8 lg:p-10">
               <span className="font-mono text-label text-gold">
-                {String(i + 1).padStart(2, "0")}
+                {i + 1}
               </span>
               <h3 className="mt-5 font-display text-2xl text-ink">{occasion.title}</h3>
               <p className="mt-3 leading-relaxed text-ink/70">{occasion.body}</p>

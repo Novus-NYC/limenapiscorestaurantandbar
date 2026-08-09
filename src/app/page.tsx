@@ -10,10 +10,13 @@ import { GrowRule } from "@/components/motion/GrowRule"
 import { PinnedChapter } from "@/components/motion/PinnedChapter"
 import { Hero } from "@/components/site/Hero"
 
-/** The four dishes with both a real photograph and a confirmed price. */
+/**
+ * The four dishes we hold a real photograph of. Price is shown where the research
+ * confirmed one and left off where it didn't — PriceTag invents nothing.
+ */
 const signatures = menu
   .flatMap((c) => c.items.map((i) => ({ ...i, categorySlug: c.slug })))
-  .filter((i) => i.image && i.price.amount !== null)
+  .filter((i) => i.image)
 
 export default function HomePage() {
   return (
@@ -64,7 +67,7 @@ export default function HomePage() {
 
       {/* ── Pinned chapters ───────────────────────────────────────── */}
       <PinnedChapter
-        index="01"
+        index="1"
         eyebrow="The cold kitchen"
         media={
           <Img
@@ -97,7 +100,7 @@ export default function HomePage() {
       </PinnedChapter>
 
       <PinnedChapter
-        index="02"
+        index="2"
         eyebrow="The fire"
         flip
         media={
@@ -128,7 +131,7 @@ export default function HomePage() {
       </PinnedChapter>
 
       <PinnedChapter
-        index="03"
+        index="3"
         eyebrow="The bar"
         media={
           /* The storefront rather than the dining room here: it's our highest-resolution
@@ -217,19 +220,12 @@ export default function HomePage() {
           {praiseThemes.map((theme, i) => (
             <div key={theme.title}>
               <span className="font-mono text-label text-gold">
-                {String(i + 1).padStart(2, "0")}
+                {i + 1}
               </span>
               <h3 className="mt-4 font-display text-2xl text-ink">{theme.title}</h3>
               <p className="mt-3 leading-relaxed text-ink/70">{theme.body}</p>
             </div>
           ))}
-        </Reveal>
-        <Reveal className="mt-14">
-          <p className="max-w-prose text-sm leading-relaxed text-ink/65">
-            Summarized from guest reviews across {socialProof.platforms.join(", ")}. We
-            don&apos;t reprint individual reviews here — read them in full on any of those
-            platforms.
-          </p>
         </Reveal>
       </Section>
 

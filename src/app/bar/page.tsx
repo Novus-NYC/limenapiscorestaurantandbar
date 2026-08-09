@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { barMenu } from "@/content/menu"
 import { business } from "@/content/business"
 import { PageHeader } from "@/components/site/PageHeader"
+import { Img } from "@/components/ui/Img"
 import { Button, Eyebrow, Section } from "@/components/ui/kit"
 import { Reveal } from "@/components/motion/Reveal"
 import { RevealText } from "@/components/motion/RevealText"
@@ -17,7 +18,26 @@ export const metadata: Metadata = {
 export default function BarPage() {
   return (
     <>
-      <PageHeader eyebrow="21+" title="The pisco bar" intro={barMenu.blurb} />
+      <PageHeader
+        eyebrow="21+"
+        title="The pisco bar"
+        intro={barMenu.blurb}
+        media={
+          /* The storefront: the only photograph we hold where the words "Pisco Bar"
+             are on the building itself. Native 3:4, capped at 21rem: tall enough to
+             carry the opening, short enough that the headline beside it doesn't get
+             pushed down the fold, and well inside the 750px source on a 2x screen. */
+          <div className="mx-auto aspect-[3/4] max-w-[21rem] overflow-hidden rounded-card border border-ink/12">
+            <Img
+              id="storefront-greenpoint-ave"
+              alt="The Limeña storefront on Greenpoint Avenue: red brick, a deep burgundy entry, and a gold script sign."
+              sizes="(min-width: 1024px) 336px, 92vw"
+              priority
+              className="h-full w-full object-cover"
+            />
+          </div>
+        }
+      />
 
       <div className="shell">
         <GrowRule />
@@ -35,7 +55,7 @@ export default function BarPage() {
           {barMenu.piscoSours.map((sour, i) => (
             <article key={sour.name} className="bg-white/70 p-8 lg:p-10">
               <span className="font-mono text-label text-gold">
-                {String(i + 1).padStart(2, "0")}
+                {i + 1}
               </span>
               <h3 className="mt-5 font-display text-3xl text-ink">{sour.name}</h3>
               {sour.note && (

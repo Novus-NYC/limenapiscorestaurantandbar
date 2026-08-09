@@ -4,14 +4,16 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { business } from "@/content/business"
+import { Img } from "@/components/ui/Img"
 import { Button } from "@/components/ui/kit"
 import { RevealText } from "@/components/motion/RevealText"
 import { DURATION, EASE, prefersReducedMotion } from "@/lib/motion"
 
 /**
- * Full-viewport opening. The generated ember atmosphere (EmberField) shows through
- * behind it — the hero contributes only type, so the backdrop stays the focal object,
- * the way the reference keeps its canvas scene unobstructed.
+ * Full-viewport opening: type on the left, one photograph on the right.
+ *
+ * The photograph is desktop-only. On a phone the fold is already full of headline and
+ * buttons, and pushing an image in below them costs the scroll cue its place on screen.
  *
  * The scroll cue and supporting lines fade out on scrub as you leave the fold.
  */
@@ -54,42 +56,68 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 bg-gradient-to-b from-bone/80 via-bone/30 to-bone"
       />
 
-      <div data-hero-inner className="shell relative w-full">
-        <p data-hero-fade className="label opacity-0">
-          {business.address.locality}, Queens · Est. 2023
-        </p>
+      <div
+        data-hero-inner
+        className="shell relative grid w-full items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]"
+      >
+        <div>
+          <p data-hero-fade className="label opacity-0">
+            {business.address.locality}, Queens · Est. 2023
+          </p>
 
-        <RevealText
-          as="h1"
-          immediate
-          delay={0.15}
-          className="mt-8 max-w-[20ch] font-display text-display-xl text-ink"
-        >
-          Experience the taste of Peru
-        </RevealText>
+          {/*
+            Held below the display-xl clamp: the headline now shares the fold with the
+            photograph, so it's sized to the narrower column rather than the viewport.
+            The 6.25rem cap lands before the shell stops growing, so "Experience" never
+            outruns its column on a wide screen.
+          */}
+          <RevealText
+            as="h1"
+            immediate
+            delay={0.15}
+            className="mt-8 max-w-[16ch] font-display text-[clamp(2.75rem,7.2vw,6.25rem)] leading-[0.95] tracking-[-0.03em] text-ink"
+          >
+            Experience the taste of Peru
+          </RevealText>
 
-        <p
-          data-hero-fade
-          className="mt-8 max-w-prose text-lg leading-relaxed text-ink/75 opacity-0 sm:text-xl"
-        >
-          A family-run Peruvian kitchen and pisco bar on Greenpoint Ave. Ceviche cut to
-          order, chicken turned over the fire, and a sour that changes colour in the glass.
-        </p>
+          <p
+            data-hero-fade
+            className="mt-8 max-w-prose text-lg leading-relaxed text-ink/75 opacity-0 sm:text-xl"
+          >
+            A family-run Peruvian kitchen and pisco bar on Greenpoint Ave. Ceviche cut to
+            order, chicken turned over the fire, and a sour that changes colour in the
+            glass.
+          </p>
 
-        <div data-hero-fade className="mt-11 flex flex-wrap gap-4 opacity-0">
-          <Button href="/menu">View the menu</Button>
-          <Button href={business.phoneHref} variant="outline">
-            Call to book
-          </Button>
+          <div data-hero-fade className="mt-11 flex flex-wrap gap-4 opacity-0">
+            <Button href="/menu">View the menu</Button>
+            <Button href={business.phoneHref} variant="outline">
+              Call to book
+            </Button>
+          </div>
+
+          <div
+            data-hero-fade
+            className="mt-20 flex items-center gap-4 opacity-0"
+            aria-hidden
+          >
+            <span className="label">Scroll</span>
+            <span className="block h-px w-16 bg-gradient-to-r from-gold to-transparent" />
+          </div>
         </div>
 
-        <div
-          data-hero-fade
-          className="mt-20 flex items-center gap-4 opacity-0"
-          aria-hidden
-        >
-          <span className="label">Scroll</span>
-          <span className="block h-px w-16 bg-gradient-to-r from-gold to-transparent" />
+        {/* Native 4:3 at 30rem: the source is 1000px wide, which is exactly what a
+            480px frame asks for on a 2x display. No crop, no upscale. */}
+        <div data-hero-fade className="hidden opacity-0 lg:block">
+          <div className="mx-auto aspect-[4/3] max-w-[30rem] overflow-hidden rounded-card border border-ink/12">
+            <Img
+              id="dish-steak-plancha"
+              alt="Grilled steak on a cast-iron plancha with roasted potatoes and a cup of salsa criolla."
+              sizes="480px"
+              priority
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

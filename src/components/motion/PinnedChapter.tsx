@@ -9,7 +9,7 @@ interface PinnedChapterProps {
   /** Holds position while the text column scrolls past it. */
   media: ReactNode
   children: ReactNode
-  /** Two-digit chapter number, shown as a mono micro-label. */
+  /** Chapter number, shown as a mono micro-label. */
   index: string
   eyebrow: string
   /** Flip which side the media sits on, so chapters alternate down the page. */

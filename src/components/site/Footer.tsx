@@ -104,11 +104,33 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-ink/12 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-ink/12 pt-8 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
           <p className="font-mono text-label text-ink/65">
             © {new Date().getFullYear()} {business.fullName}
           </p>
-          <p className="font-mono text-label text-ink/65">Must be 21+ to drink · Please drink responsibly</p>
+
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
+            <p className="font-mono text-label text-ink/65">
+              Must be 21+ to drink · Please drink responsibly
+            </p>
+            <p className="font-mono text-label text-ink/65">
+              Made by{" "}
+              {/*
+                Novus brand peach (#F6B78D) as the underline only — it measures 1.6:1
+                against the bone base, so it can carry a rule but never the text. Hover
+                takes the same hue down to #AF4E0E, which is the darkest read of that
+                peach that still passes AA (4.86:1) at this 11px size.
+              */}
+              <a
+                href="https://novusnyc.org"
+                target="_blank"
+                rel="noreferrer"
+                className="text-ink underline decoration-[#F6B78D] decoration-2 underline-offset-4 transition-colors duration-micro hover:text-[#AF4E0E]"
+              >
+                Novus
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
