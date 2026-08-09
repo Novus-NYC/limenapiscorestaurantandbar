@@ -2,11 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  padding: 0;
-  margin: 0;
+@layer base {
+  :root {
+    --ease-cinematic: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --nav-h: 4.5rem;
+  }
+
+  html {
+    /* Lenis drives scrolling; native smooth would fight it. */
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bone text-ink font-sans antialiased;
+    background-color: theme("colors.bone.DEFAULT");
+    overscroll-behavior-y: none;
+  }
+
+  ::selection {
+    @apply bg-crimson text-white;
+  }
+
+  /* Focus ring: burgundy on the light base — 10.7:1, visible over any surface. */
+  :focus-visible {
+    outline: 2px solid theme("colors.burgundy");
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display font-normal text-balance;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  /*
+   * Micro-label. The reference's "spec sheet" caption, used for eyebrows and prices.
+   * Held at /70 — at 11px this is small text and needs 4.5:1 against the base.
+   */
+  .label {
+    @apply font-mono text-label uppercase text-ink/70;
+  }
+
+  .shell {
+    @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Hairline rules that grow into place on scroll (rowGrow / colGrow). */
+  .rule {
+    @apply block h-px w-full origin-left bg-ink/15;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Set by the Reveal component before GSAP takes over, so nothing flashes unstyled. */
+  .will-reveal {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  /* Stagger mode: the container stays visible and its children are the ones hidden. */
+  .will-reveal-children > * {
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+}
+
+/*
+ * Accessibility: the whole motion layer is heavy by design. When the visitor asks for
+ * less, every scroll animation collapses to its final state.
+ * The JS layer reads the same query — this is the CSS half of the contract.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .will-reveal,
+  .will-reveal-children > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

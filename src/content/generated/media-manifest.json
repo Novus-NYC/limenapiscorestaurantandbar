@@ -1,0 +1,97 @@
+{
+  "dish-lomo-saltado-arroz": {
+    "src": "/media/dish-lomo-saltado-arroz-800.webp",
+    "width": 800,
+    "height": 600,
+    "aspectRatio": 1.3333,
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwBACdASoUAA8APu1iqU2ppaQiMAgBMB2JYgCdMoR4GB4ncqGHNTikzyAA/hiO6VsRWwxTXVmuu9mD8yhntcLgd44e8TcRX/7bL4qszh9Jn3pNx8eoEizDOI42S8OBQAA=",
+    "srcSet": {
+      "avif": "/media/dish-lomo-saltado-arroz-400.avif 400w, /media/dish-lomo-saltado-arroz-800.avif 800w",
+      "webp": "/media/dish-lomo-saltado-arroz-400.webp 400w, /media/dish-lomo-saltado-arroz-800.webp 800w"
+    }
+  },
+  "dish-lomo-saltado-tacu": {
+    "src": "/media/dish-lomo-saltado-tacu-1000.webp",
+    "width": 1000,
+    "height": 750,
+    "aspectRatio": 1.3333,
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABwBACdASoUAA8APu1iqU2ppaQiMAgBMB2JQBOmUABfl+2ERdcOAHXM0v7ngAD9mLrICXSAzpRoNwvBB2HQwu9+66ATIVbRb6NxbFMgQLqtKRjPI6nLXHafXTWWRVYmYAA=",
+    "srcSet": {
+      "avif": "/media/dish-lomo-saltado-tacu-400.avif 400w, /media/dish-lomo-saltado-tacu-800.avif 800w, /media/dish-lomo-saltado-tacu-1000.avif 1000w",
+      "webp": "/media/dish-lomo-saltado-tacu-400.webp 400w, /media/dish-lomo-saltado-tacu-800.webp 800w, /media/dish-lomo-saltado-tacu-1000.webp 1000w"
+    }
+  },
+  "dish-papa-huancaina": {
+    "src": "/media/dish-papa-huancaina-1000.webp",
+    "width": 1000,
+    "height": 750,
+    "aspectRatio": 1.3333,
+    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwBACdASoUAA8APu1kqk4ppaQiMAgBMB2JZgCdMoR3ABw9lJW93L+FkQwYc3QAAHhYrSVC/80KHdEIkQQmgxzqonrdj7q3Pq9vx3oGX21qnuQA",
+    "srcSet": {
+      "avif": "/media/dish-papa-huancaina-400.avif 400w, /media/dish-papa-huancaina-800.avif 800w, /media/dish-papa-huancaina-1000.avif 1000w",
+      "webp": "/media/dish-papa-huancaina-400.webp 400w, /media/dish-papa-huancaina-800.webp 800w, /media/dish-papa-huancaina-1000.webp 1000w"
+    }
+  },
+  "dish-steak-plancha": {
+    "src": "/media/dish-steak-plancha-1000.webp",
+    "width": 1000,
+    "height": 750,
+    "aspectRatio": 1.3333,
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAwBACdASoUAA8APu1iqk2ppaQiMAgBMB2JZACxGwAB0chhmtI/nJ1NtoAA/f8Hn41sieUS6AfWJKagvA57GR4lDDqOsoPCfwe505LpShlrQwaujuemrqRvwAA=",
+    "srcSet": {
+      "avif": "/media/dish-steak-plancha-400.avif 400w, /media/dish-steak-plancha-800.avif 800w, /media/dish-steak-plancha-1000.avif 1000w",
+      "webp": "/media/dish-steak-plancha-400.webp 400w, /media/dish-steak-plancha-800.webp 800w, /media/dish-steak-plancha-1000.webp 1000w"
+    }
+  },
+  "dish-tallarin-saltado-carne": {
+    "src": "/media/dish-tallarin-saltado-carne-1000.webp",
+    "width": 1000,
+    "height": 750,
+    "aspectRatio": 1.3333,
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAADwAwCdASoUAA8APu1iqU2ppaQiMAgBMB2JYgCdMoR3AA9Y6doL0NogAP2ZX3EpzthPaLHnC/ikUG+wCYq9ySvn55XPszJsDNok1vdOT2Bky8UDAAA=",
+    "srcSet": {
+      "avif": "/media/dish-tallarin-saltado-carne-400.avif 400w, /media/dish-tallarin-saltado-carne-800.avif 800w, /media/dish-tallarin-saltado-carne-1000.avif 1000w",
+      "webp": "/media/dish-tallarin-saltado-carne-400.webp 400w, /media/dish-tallarin-saltado-carne-800.webp 800w, /media/dish-tallarin-saltado-carne-1000.webp 1000w"
+    }
+  },
+  "dish-tallarines-verdes": {
+    "src": "/media/dish-tallarines-verdes-1000.webp",
+    "width": 1000,
+    "height": 750,
+    "aspectRatio": 1.3333,
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwBACdASoUAA8APu1kqU2ppaQiMAgBMB2JQAAML47mdRhp+F90qoTS+6AA9rJxyn7/00Qv8xIr6N4pS54X0INXj6FD7WKPxGAVDsT0KuEj9laTkDsL4QAA",
+    "srcSet": {
+      "avif": "/media/dish-tallarines-verdes-400.avif 400w, /media/dish-tallarines-verdes-800.avif 800w, /media/dish-tallarines-verdes-1000.avif 1000w",
+      "webp": "/media/dish-tallarines-verdes-400.webp 400w, /media/dish-tallarines-verdes-800.webp 800w, /media/dish-tallarines-verdes-1000.webp 1000w"
+    }
+  },
+  "interior-dining-room": {
+    "src": "/media/interior-dining-room-574.webp",
+    "width": 574,
+    "height": 859,
+    "aspectRatio": 0.6682,
+    "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADwBACdASoUAB4APu1eqE6ppKOiMBgMATAdiWMAtsgRWuF+lxjFVRjW8EaPkshUXAAA/RHKr9kbiYv621SUNdnk7WZPG62eID+J40o4zZHuQoaDt0xem2WBWEnImWGHBBQPerIWZSIHgoT0v+JoQBEPIQJ1L5zS37VZ+AAA",
+    "srcSet": {
+      "avif": "/media/interior-dining-room-400.avif 400w, /media/interior-dining-room-574.avif 574w",
+      "webp": "/media/interior-dining-room-400.webp 400w, /media/interior-dining-room-574.webp 574w"
+    }
+  },
+  "logo-limena": {
+    "src": "/media/logo-limena.png",
+    "width": 400,
+    "height": 168,
+    "aspectRatio": 2.381,
+    "lqip": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4WAoAAAAQAAAAEwAABwAAQUxQSGQAAAANcBhJbtvgAUKp/1KzEN6hiYiIAV837nsJRAAzdM6qxjeg+Ju5xL3AkKU+lC1qA3Wd6o7kNBtYDUi8d9c8S1MV2kIy3oCWWxWZJCDdUZhn8nnFUZFQSBFj9n6OsG3mk1S0iI6hVlA4IFQAAACQAwCdASoUAAgAPu1kq04ppaQiMAgBMB2JagCdL46CbROMei4AAP7s2cgx+ooQwlu9mmsa3SvQf/yU/xIGH7ye5Vm72x3n8adDvo5Lriwhq0HgAAA="
+  },
+  "storefront-greenpoint-ave": {
+    "src": "/media/storefront-greenpoint-ave-750.webp",
+    "width": 750,
+    "height": 1000,
+    "aspectRatio": 0.75,
+    "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwBACdASoUABsAPu1kqE2ppaOiMAgBMB2JQBibAlQTYWlFfkEGF9hSxLnGb5IWrEYA8Q9ScHjIdHQ39wMpY7Ip5b/+pRL88jCSCpgYRv7gf42/5bSVuzlHrTEzovTBw9GwyvRETwrWs7tD1AOhh5NB5AAAAA==",
+    "srcSet": {
+      "avif": "/media/storefront-greenpoint-ave-400.avif 400w, /media/storefront-greenpoint-ave-750.avif 750w",
+      "webp": "/media/storefront-greenpoint-ave-400.webp 400w, /media/storefront-greenpoint-ave-750.webp 750w"
+    }
+  }
+}
