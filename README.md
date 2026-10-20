@@ -85,7 +85,7 @@ It throws at build time on an unknown asset id rather than shipping a broken ima
 
 ## Motion
 
-The motion system is transplanted from the `hubtown` Volta template — its structure and
+The motion system is transplanted from the `hubtown` Novus template — its structure and
 primitives, not its content or palette.
 
 | Reference | Here |
